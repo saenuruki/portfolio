@@ -1,15 +1,11 @@
 <!DOCTYPE HTML>
-<!--
-	Prologue by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>Prologue by HTML5 UP</title>
+		<title>Sae Nuruki</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" href="https://saenuruki.com/images/favicon-32.ico" />
 	</head>
 	<body class="is-preload">
 
@@ -20,7 +16,7 @@
 
 					<!-- Logo -->
 						<div id="logo">
-							<span class="image avatar48"><img src="images/profile.png" alt="" /></span>
+							<span class="image avatar48"><img src="https://saenuruki.com/images/profile.png" alt="" /></span>
 							<h1 id="title">Sae Nuruki</h1>
 							<p>Global ML Evangelist</p>
 						</div>
@@ -60,8 +56,8 @@
 						<div class="container">
 
 							<header>
-								<h2 class="alt">Hi! I'm <strong>Sae Nuruki</strong>, </br>Global Machine Learning Evangelist.</h2>
-								<p>"Turning ideas into Reality."</p>
+								<h2 class="alt"><strong>Hi! I'm Sae Nuruki, </br>Global Machine Learning Evangelist.</strong></h2>
+								<p></strong>"Turning ideas into Reality."</strong></p>
 							</header>
 
 							<!-- <footer>
@@ -84,13 +80,13 @@
 							<div class="row">
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/JourneyNote.png" alt="" /></a>
+										<a href="https://www.facebook.com/groups/600278874029776/" class="image fit"><img src="https://saenuruki.com/images/JourneyNote.png" alt="" /></a>
 										<header>
 											<h3>JourneyNote</h3>
 										</header>
 									</article>
 									<article class="item">
-										<a href="https://apps.apple.com/jp/app/evangvitaldata/id1497444016" class="image fit"><img src="images/EvangVital.png" alt="" /></a>
+										<a href="https://apps.apple.com/jp/app/evangvitaldata/id1497444016" class="image fit"><img src="https://saenuruki.com/images/EvangVital.png" alt="" /></a>
 										<header>
 											<h3>OSS Google App Service API architecture</h3>
 										</header>
@@ -98,13 +94,13 @@
 								</div>
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/JunctionSingapore.png" alt="" /></a>
+										<a href="https://github.com/saenuruki/JunctionSingapore2019" class="image fit"><img src="https://saenuruki.com/images/JunctionSingapore.png" alt="" /></a>
 										<header>
 											<h3>Engaged EC service with AR</h3>
 										</header>
 									</article>
 									<article class="item">
-										<a href="https://apps.apple.com/jp/app/evang%E8%8B%B1%E8%AA%9E/id1412606819" class="image fit"><img src="images/EvangEng.png" alt="" /></a>
+										<a href="https://apps.apple.com/jp/app/evang%E8%8B%B1%E8%AA%9E/id1412606819" class="image fit"><img src="https://saenuruki.com/images/EvangEng.png" alt="" /></a>
 										<header>
 											<h3>Voice Recognition App to develop language skill</h3>
 										</header>
@@ -112,13 +108,13 @@
 								</div>
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a href="https://apps.apple.com/jp/app/evangmap/id1386195133" class="image fit"><img src="images/EvangMap.png" alt="" /></a>
+										<a href="https://apps.apple.com/jp/app/evangmap/id1386195133" class="image fit"><img src="https://saenuruki.com/images/EvangMap.png" alt="" /></a>
 										<header>
 											<h3>Image Recognition App for detecting shooted location</h3>
 										</header>
 									</article>
 									<article class="item">
-										<a href="https://devpost.com/software/travel-quest" class="image fit"><img src="images/junction2019.JPG" alt="" /></a>
+										<a href="https://devpost.com/software/travel-quest" class="image fit"><img src="https://saenuruki.com/images/junction2019.JPG" alt="" /></a>
 										<header>
 											<h3>Junction Tokyo 2019</br>Finalist</h3>
 										</header>
@@ -137,7 +133,7 @@
 								<h2>About Me</h2>
 							</header>
 
-							<a href="#" class="image featured"><img src="images/aboutme.png" alt="" /></a>
+							<a href="#" class="image featured"><img src="https://saenuruki.com/images/aboutme.png" alt="" /></a>
 
 							<p>I'm Software Engineer with 5 years of experience in solving customer issues.</br>
 							Strong abilities to build mobile applications (via iOS and Swift) and back-end infrastructure (via AWS and GCP).</br>
@@ -157,12 +153,12 @@
 
 							<p>Please feel free to contact me.</p>
 
-							<form method="post" action="mailto:sae.tokodai@gmail.com" enctype="text/plain">
+							<form onsubmit="sendEmail()">
 								<div class="row">
-									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
-									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
+									<div class="col-6 col-12-mobile"><input type="text" id="name" placeholder="Name" required/></div>
+									<div class="col-6 col-12-mobile"><input type="text" id="email" placeholder="Email" required/></div>
 									<div class="col-12">
-										<textarea name="message" placeholder="Message"></textarea>
+										<textarea id="message" placeholder="Message"></textarea>
 									</div>
 									<div class="col-12">
 										<input type="submit" value="Send Message" />
@@ -180,7 +176,7 @@
 
 				<!-- Copyright -->
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; 2020 Sae Nuruki</li>
 					</ul>
 
 			</div>
@@ -193,6 +189,24 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				function sendEmail () {
+				    // 入力フォームの値を取得
+				    var name = document.getElementById("name").value;
+				    var email = document.getElementById("email").value;
+				    var message = document.getElementById("message").value;
+			      	fetch('https://u5syop6lme.execute-api.us-east-1.amazonaws.com/prod/submit', {
+			        	method: 'POST',
+			        	headers: {
+							'Content-Type': 'application/json; charset=utf-8',
+						},	
+			        	// body: JSON.stringify({ name, email, message })
+			        	body: JSON.stringify({ "name": name, "email": email, "message": message })
+			      	})
+			      	.then(data => alert(data)) // JSON-string from `response.json()` call
+  					.catch(error => alert(error));
+			    }
+			</script>
 
 	</body>
 </html>
