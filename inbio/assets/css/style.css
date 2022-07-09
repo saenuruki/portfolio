@@ -11308,7 +11308,7 @@ body.template-color-1 {
   padding: 50px 40px 40px;
   transition: all 0.3s ease-in-out 0s;
 }
-.left-header-style .logo-area a img {
+.left-header-style .logo-area img {
   border-radius: 50%;
   border: 5px solid #32363b;
   box-shadow: var(--shadow-1);
@@ -14578,7 +14578,7 @@ div#featured-project-carousel {
 .personal-experience-inner .experience-list .resume-single-list .inner .heading .date-of-time {
   display: inline-block;
 }
-.personal-experience-inner .experience-list .resume-single-list .inner .heading .date-of-time span {
+.personal-experience-inner .experience-list .resume-single-list .inner .heading .date-of-time a {
   color: var(--color-primary);
   display: block;
   font-size: 14px;
@@ -14609,7 +14609,7 @@ div#featured-project-carousel {
 .personal-experience-inner .experience-list .resume-single-list:hover .inner .heading .title h4 {
   color: var(--color-white);
 }
-.personal-experience-inner .experience-list .resume-single-list:hover .inner .heading .date-of-time span {
+.personal-experience-inner .experience-list .resume-single-list:hover .inner .heading .date-of-time a {
   background: #1e2025;
   box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #222527;
 }
@@ -18403,7 +18403,7 @@ body.white-version .popup-mobile-menu .primary-menu .has-droupdown .submenu {
 .white-version .rn-content-wrapper .tab-content-wrapper .tab-content .personal-experience-inner .resume-single-list .heading .title h4 {
   color: var(--color-body-white);
 }
-.white-version .rn-content-wrapper .tab-content-wrapper .tab-content .personal-experience-inner .resume-single-list .heading .date-of-time span {
+.white-version .rn-content-wrapper .tab-content-wrapper .tab-content .personal-experience-inner .resume-single-list .heading .date-of-time a {
   background: var(--color-white);
   box-shadow: var(--shadow-white-3);
   color: var(--color-primary);
@@ -18417,7 +18417,7 @@ body.white-version .popup-mobile-menu .primary-menu .has-droupdown .submenu {
 .white-version .rn-content-wrapper .tab-content-wrapper .tab-content .personal-experience-inner .resume-single-list:hover .heading .title span {
   color: var(--color-white);
 }
-.white-version .rn-content-wrapper .tab-content-wrapper .tab-content .personal-experience-inner .resume-single-list:hover .heading .date-of-time span {
+.white-version .rn-content-wrapper .tab-content-wrapper .tab-content .personal-experience-inner .resume-single-list:hover .heading .date-of-time a {
   background: var(--color-primary);
   box-shadow: none;
   color: var(--color-white);
@@ -18435,7 +18435,7 @@ body.white-version .popup-mobile-menu .primary-menu .has-droupdown .submenu {
   background: var(--gradient-box-w);
   border-right: 1px solid #dce1e4;
 }
-.white-version .left-header-style .logo-area a img {
+.white-version .left-header-style .logo-area img {
   border: 5px solid #fff;
   box-shadow: var(--shadow-white-3);
 }
@@ -19041,7 +19041,7 @@ body.white-version .popup-mobile-menu .primary-menu .has-droupdown .submenu {
 .white-version .rn-resume-area .personal-experience-inner .experience-list .resume-single-list .heading .title span {
   color: var(--color-body-white);
 }
-.white-version .rn-resume-area .personal-experience-inner .experience-list .resume-single-list .heading .date-of-time span {
+.white-version .rn-resume-area .personal-experience-inner .experience-list .resume-single-list .heading .date-of-time a {
   background: var(--color-white);
   box-shadow: var(--shadow-white-3);
 }
@@ -19054,7 +19054,7 @@ body.white-version .popup-mobile-menu .primary-menu .has-droupdown .submenu {
 .white-version .rn-resume-area .personal-experience-inner .experience-list .resume-single-list:hover .heading .title span {
   color: var(--color-white);
 }
-.white-version .rn-resume-area .personal-experience-inner .experience-list .resume-single-list:hover .heading .date-of-time span {
+.white-version .rn-resume-area .personal-experience-inner .experience-list .resume-single-list:hover .heading .date-of-time a {
   box-shadow: none;
   background: #fe024e;
   color: var(--color-white);
