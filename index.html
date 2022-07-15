@@ -1073,13 +1073,13 @@
                                 <div class="content">
                                     <div class="category-info">
                                         <div class="category-list">
-                                            <a href="javascript:void(0)">Canada</a>
+                                            <a href="javascript:void(0)">Design</a>
                                         </div>
                                         <div class="meta">
-                                            <span><i class="feather-clock"></i> 2 min read</span>
+                                            <span><i class="feather-clock"></i>1 June, 2022</span>
                                         </div>
                                     </div>
-                                    <h4 class="title"><a href="javascript:void(0)">T-shirt design is the part of design
+                                    <h4 class="title"><a href="javascript:void(0)">My recommend iOS System Design Pattern
                                             <i class="feather-arrow-up-right"></i></a></h4>
                                 </div>
                             </div>
@@ -1088,7 +1088,7 @@
                     <!-- End Single blog -->
 
                     <!-- Start Single blog -->
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="150" data-aos-once="true" class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
+                    <!-- <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="150" data-aos-once="true" class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
                         <div class="rn-blog" data-bs-toggle="modal" data-bs-target="#blogModalCenter02">
                             <div class="inner">
                                 <div class="thumbnail">
@@ -1110,11 +1110,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- End Single blog -->
 
                     <!-- Start Single blog -->
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true" class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
+                    <!-- <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true" class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
                         <div class="rn-blog" data-bs-toggle="modal" data-bs-target="#blogModalCenter03">
                             <div class="inner">
                                 <div class="thumbnail">
@@ -1136,7 +1136,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- End Single blog -->
 
                 </div>
@@ -1544,61 +1544,42 @@
                     <div class="modal-body">
                         <img src="assets/images/blog/blog-01.png" alt="news modal" class="img-fluid modal-feat-img">
                         <div class="news-details">
-                            <span class="date">2 May, 2021</span>
-                            <h2 class="title">Digital Marketo to Their New Office.</h2>
-                            <p>Nobis eleifend option congue nihil imperdiet doming id quod mazim placerat
-                                facer
-                                possim assum.
-                                Typi non
-                                habent claritatem insitam; est usus legentis in iis qui facit eorum
-                                claritatem.
-                                Investigationes
-                                demonstraverunt
-                                lectores legere me lius quod ii legunt saepius. Claritas est etiam processus
-                                dynamicus, qui
-                                sequitur
-                                mutationem consuetudium lectorum.</p>
-                            <h4>Nobis eleifend option conguenes.</h4>
-                            <p>Mauris tempor, orci id pellentesque convallis, massa mi congue eros, sed
-                                posuere
-                                massa nunc quis
-                                dui.
-                                Integer ornare varius mi, in vehicula orci scelerisque sed. Fusce a massa
-                                nisi.
-                                Curabitur sit
-                                amet
-                                suscipit nisl. Sed eget nisl laoreet, suscipit enim nec, viverra eros. Nunc
-                                imperdiet risus
-                                leo,
-                                in rutrum erat dignissim id.</p>
-                            <p>Ut rhoncus vestibulum facilisis. Duis et lorem vitae ligula cursus venenatis.
-                                Class aptent
-                                taciti sociosqu
-                                ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc vitae
-                                nisi
-                                tortor. Morbi
-                                leo
-                                nulla, posuere vel lectus a, egestas posuere lacus. Fusce eleifend hendrerit
-                                bibendum. Morbi
-                                nec
-                                efficitur ex.</p>
-                            <h4>Mauris tempor, orci id pellentesque.</h4>
-                            <p>Nulla non ligula vel nisi blandit egestas vel eget leo. Praesent fringilla
-                                dapibus dignissim.
-                                Pellentesque
-                                quis quam enim. Vestibulum ultrices, leo id suscipit efficitur, odio lorem
-                                rhoncus dolor, a
-                                facilisis
-                                neque mi ut ex. Quisque tempor urna a nisi pretium, a pretium massa
-                                tristique.
-                                Nullam in
-                                aliquam
-                                diam. Maecenas at nibh gravida, ornare eros non, commodo ligula. Sed
-                                efficitur
-                                sollicitudin
-                                auctor.
-                                Quisque nec imperdiet purus, in ornare odio. Quisque odio felis, vestibulum
-                                et.</p>
+                            <span class="date">1 June, 2022</span>
+                            <h2 class="title">My recommend iOS System Design Pattern</h2>
+                            <h4>Overview</h4>
+                            <p>The system design policy for the iOS App is to be implemented with the following ideas in mind, so that we can implement based on the common understanding.<br>
+                                Unfortunately this design policy is not always followed in the current source code, continuous refactoring is also required to bring it closer to the ideal state.<br>
+                                This document is divided into two major chapters. GUI Architecture and System Architecture.</p>
+                            <h4>1. GUI Architecture</h4>
+                            <h5>1-1. Presentation Domain Separation (PDS)</h5>
+                            <p>It all starts with separating the UI logic from the Domain logic.<br>
+                                <b>Don't</b> implement Data Transformation or Data Fetching in UIViewController. Be aware that only UI-related processing should be implemented in the ViewController, as it can easily become a Massive View Controller.</p>
+                            <img src="assets/images/blog/ios-design-01.png" alt="blog image" class="img-fluid modal-feat-img">
+                            <h5>1-2. MVVM</h5>
+                            <p>We use the <b>MVVM + RxSwift</b> pattern.</p>
+                            <img src="assets/images/blog/ios-design-02.png" alt="blog image" class="img-fluid modal-feat-img">
+                            <p>In the MVVM pattern, data binding between User Input and View Output can be very complex, so we will avoid that problem. (Be aware of unidirectional data flows such as Flux and Redux.)<br>
+                                Define the Inputs and Outputs that will be used on the ViewModel, respectively: clarity about what is input from the UI and what is output to the UI will make unit testing of the ViewModel easier, and simplifying the data flow will make it easier to identify problems.<br>
+                                Note that it is not necessary to use Observable for Input and Driver for Output, but be sure to implement with Thread in mind.</p>
+                            <p>The connection between ViewModel and Model in MVVM tends to be defined vaguely, but implementation should be done with <b>Dependency Injection</b> in mind.<br>
+                                By expressing interfaces in terms of Protocols, it is possible to replace actual implementations with test implementations in a stub-like manner.<br>
+                                Also, by explicitly connecting only the necessary domain logic to the ViewModel, it becomes clear which domain logic is needed by the UI.</p>
+                            <img src="assets/images/blog/ios-design-03.png" alt="blog image" class="img-fluid modal-feat-img">
+                            <h5>1-3. MVVM + C</h5>
+                            <p>In addition, the <b>coordinator pattern</b> separates the screen transition logic from the View.<br>
+                                This improves ViewController reusability and prevents ViewControllers from being tightly coupled with each other.</p>
+                            <img src="assets/images/blog/ios-design-04.png" alt="blog image" class="img-fluid modal-feat-img">
+                            <h4>System Architecture</h4>
+                            <h5>2-1. Inspired by Clean Architecture</h5>
+                            <p>GUI Architecture is only intended to clearly separate UI logic from Domain logic, but it is necessary to design the entire System.<br>
+                                In Mobile App, implementation of <b>Clean Architecture</b> is not strictly defined because it makes it more complicated.<br>
+                                Imagine Layers spread out in concentric circles, and the implementation that we have just applied PDS will clarify modules that change little and achieve domain-driven design.<br>
+                                As shown in the right figure below, let's apply and deepen the GUI architecture, which has been explained in Chapter 1.</p>
+                            <img src="assets/images/blog/ios-design-05.png" alt="blog image" class="img-fluid modal-feat-img">
+                            <p>We do not require a strict Clean Architecture.<br>
+                                Each of the MVVM+C patterns mentioned the above should be designed to allow Dependency Injection into ViewModel.<br>
+                                The Domain provided by the service should be loosely coupled to each other and only available by Injection to the ViewModel.</p>
+                            <img src="assets/images/blog/ios-design-06.png" alt="blog image" class="img-fluid modal-feat-img">
                         </div>
                     </div>
                     <!-- End of .modal-body -->
