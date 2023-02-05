@@ -1133,7 +1133,7 @@
                     <!-- End Single blog -->
 
                     <!-- Start Single blog -->
-                    <!-- <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="150" data-aos-once="true" class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
+                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="150" data-aos-once="true" class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
                         <div class="rn-blog" data-bs-toggle="modal" data-bs-target="#blogModalCenter02">
                             <div class="inner">
                                 <div class="thumbnail">
@@ -1144,18 +1144,18 @@
                                 <div class="content">
                                     <div class="category-info">
                                         <div class="category-list">
-                                            <a href="javascript:void(0)">Development</a>
+                                            <a href="javascript:void(0)">Implementation</a>
                                         </div>
                                         <div class="meta">
-                                            <span><i class="feather-clock"></i> 2 hour read</span>
+                                            <span><i class="feather-clock"></i>5 February, 2023</span>
                                         </div>
                                     </div>
-                                    <h4 class="title"><a href="javascript:void(0)">The services provide for design <i
+                                    <h4 class="title"><a href="javascript:void(0)">SwiftUI Technology Selection Considerations<i
                                         class="feather-arrow-up-right"></i></a></h4>
                                 </div>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                     <!-- End Single blog -->
 
                     <!-- Start Single blog -->
@@ -1650,61 +1650,71 @@
                     <div class="modal-body">
                         <img src="assets/images/blog/blog-02.png" alt="news modal" class="img-fluid modal-feat-img">
                         <div class="news-details">
-                            <span class="date">2 May, 2021</span>
-                            <h2 class="title">Digital Marketo to Their New Office.</h2>
-                            <p>Nobis eleifend option congue nihil imperdiet doming id quod mazim placerat
-                                facer
-                                possim assum.
-                                Typi non
-                                habent claritatem insitam; est usus legentis in iis qui facit eorum
-                                claritatem.
-                                Investigationes
-                                demonstraverunt
-                                lectores legere me lius quod ii legunt saepius. Claritas est etiam processus
-                                dynamicus, qui
-                                sequitur
-                                mutationem consuetudium lectorum.</p>
-                            <h4>Nobis eleifend option conguenes.</h4>
-                            <p>Mauris tempor, orci id pellentesque convallis, massa mi congue eros, sed
-                                posuere
-                                massa nunc quis
-                                dui.
-                                Integer ornare varius mi, in vehicula orci scelerisque sed. Fusce a massa
-                                nisi.
-                                Curabitur sit
-                                amet
-                                suscipit nisl. Sed eget nisl laoreet, suscipit enim nec, viverra eros. Nunc
-                                imperdiet risus
-                                leo,
-                                in rutrum erat dignissim id.</p>
-                            <p>Ut rhoncus vestibulum facilisis. Duis et lorem vitae ligula cursus venenatis.
-                                Class aptent
-                                taciti sociosqu
-                                ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc vitae
-                                nisi
-                                tortor. Morbi
-                                leo
-                                nulla, posuere vel lectus a, egestas posuere lacus. Fusce eleifend hendrerit
-                                bibendum. Morbi
-                                nec
-                                efficitur ex.</p>
-                            <h4>Mauris tempor, orci id pellentesque.</h4>
-                            <p>Nulla non ligula vel nisi blandit egestas vel eget leo. Praesent fringilla
-                                dapibus dignissim.
-                                Pellentesque
-                                quis quam enim. Vestibulum ultrices, leo id suscipit efficitur, odio lorem
-                                rhoncus dolor, a
-                                facilisis
-                                neque mi ut ex. Quisque tempor urna a nisi pretium, a pretium massa
-                                tristique.
-                                Nullam in
-                                aliquam
-                                diam. Maecenas at nibh gravida, ornare eros non, commodo ligula. Sed
-                                efficitur
-                                sollicitudin
-                                auctor.
-                                Quisque nec imperdiet purus, in ornare odio. Quisque odio felis, vestibulum
-                                et.</p>
+                            <span class="date">5 February, 2023</span>
+                            <h2 class="title">SwiftUI Technology Selection Considerations</h2>
+                            <h4>Overview</h4>
+                            <p>SwiftUI and Combine were introduced in iOS13, and async/await was introduced in Swift5.5, 
+                                causing a significant change from the existing UIKit implementation. 
+                                As time has passed since the introduction of SwiftUI, related articles and case studies have increased. 
+                                There are fewer applications that still support iOS13 or earlier, and these refactoring tasks are becoming necessary.</p>
+                            <h4>Technology Selection Considerations</h4>
+                            <p>The main focus of this article is two points:
+                                <ul>
+                                    <li>Coexistence of "Source of Truth" promoted by SwiftUI and Combine implementation</li>
+                                    <li>Use of Combine asynchronous processing and Swift's async/await asynchronous processing</li>
+                                </ul>
+                                I believe that by designing these issues in a clean manner with the UI architecture, each of their strengths can be maximized. The following figure shows a MVVM architecture design.</p>
+                            <img src="assets/images/blog/ios-tech-01.png" alt="blog image" class="img-fluid modal-feat-img">
+                            <p>
+                                <h5>Data update only in UI</h5>
+                                <ul>
+                                    <li>Follow Apple's "Source of Truth" promotion</li>
+                                    <li>Maintain properties at the highest layer of the View Hierarchy and render updates hierarchically top-down with data updates</li>
+                                    <li>Make it a single directional data flow, like Flux or Redux</li>
+                                </ul>
+                                <h5>Data management of Domain and UI connection</h5>
+                                <ul>
+                                    <li>Use Combine to subscribe to data changes with ObservableObject</li>
+                                    <li>Bilateral binding with View, but design each data flow to be a single flow</li>
+                                    <li>Enable asynchronous actions separated from the Main Thread</li>
+                                </ul>
+                                <h5>Data handling of Domain</h5>
+                                <ul>
+                                    <li>The domain logic is designed to be modularized by functionality, and dependencies are made clear by dependency injection into the UI logic</li>
+                                    <li>Implementations like functional programming, where functions are processed when called from the UI logic</li>
+                                    <li>Processes are executed simply and asynchronously without using the Observable pattern, using Swift's async/await function.</li>
+                                </ul>
+                            </p>
+
+                            <h4>View</h4>
+                            <img src="assets/images/blog/ios-tech-02.png" alt="blog image" class="img-fluid modal-feat-img">
+                            <p>In SwiftUI, all data within the View hierarchy must be defined with a single source of truth. Unlike in UIKit, where Views are defined as a Class type, SwiftUI defines Views as Struct type. This change is significant because Views do not maintain state, but instead render a blueprint each time the data is updated.</p>
+                            <p>SwiftUI provides many new Property Wrappers specifically for Views. By properly utilizing these, you can achieve a single-direction data flow similar to that of Redux. Additionally, being the single source of truth ensures that changes can be made safely from any thread.</p>
+                            <img src="assets/images/blog/ios-tech-03.png" alt="blog image" class="img-fluid modal-feat-img">
+                            <p>The State is defined at the top-most View of the necessary hierarchy. Lower-level Views make use of the State by either Binding or copying the Data from the top-most View.</p>
+                            <p>
+                                <ul>
+                                    <li>@Binding allows for Read & Write operations on Child Views</li>
+                                    <li>let allows for Read Only operations on Child Views</li>
+                                </ul>
+                            </p>
+
+                            <h4>ViewModel</h4>
+                            <p>ViewModel is a design method used in MVVM UI architecture that binds UI logic and domain logic bidirectionally. It aims to subscribe to the results of domain logic processing using the Observer pattern or to process it isolated from the main thread.</p>
+                            <p>To maximize the effects of the Observer pattern, Combine, which was introduced in iOS 13, is adopted. RxSwift, which has been supported for a long time to realize reactive programming in Swift, is still very convenient as an open-source.</p>
+                            <p>However, as iOS natively supports conversion to Combine through features such as NotificationCenter.default.publisher, Timer.publish(), and NSObject.KeyValueObservingPublisher, let's actively adopt Combine.</p>
+                            <p>The bidirectional binding in MVVM has the disadvantage that data changes in both directions. I introduce a mechanism for changing data in one direction, like Redux.</p>
+                            <img src="assets/images/blog/ios-tech-04.png" alt="blog image" class="img-fluid modal-feat-img">
+                            <p>Please define ViewModel based on the above as a template. ViewModel is defined as a struct and consists of three components: Input, which collects triggers, Output, which collects observable data, and a definition of the data flow from Input to Output.</p>
+                            <p>To prevent bidirectional reading and writing of data, we make Input a request for data changes and Output a read-only data, and subscribe to data changes in one direction.</p>
+                            <p>The key here is the ObservableObject and Published of Combine. By conforming to ObservableObject, data will be reloaded in the view when there is a change. The Published property wrapper can tell SwiftUI to trigger the view's reload.</p>
+
+                            <h4>Model</h4>
+                            <p>The domain logic separates itself from the UI logic by utilizing the concept of separation of concerns (SoC). SoC means building a program with components that are separated by concerns or responsibilities. By modularizing the functionality, the necessary functions can be tied to the necessary UI. This is called Dependency Injection. </p>
+                            <p>For example, as shown in the figure, the Purchase Service, which has payment-related functions, can be applied to the UI that requires payment information and processing, and made inaccessible from other UIs. Similarly, by tying the Auth Service to the UI that requires authentication information and processing, it is easy to understand which screens require authentication information. </p>
+                            <p>Implementing this modular, function-based Model, which is separated by concerns, makes it possible to use it as a module or SDK call, using a different asynchronous description with async/await, rather than Combine. </p>
+                            <img src="assets/images/blog/ios-tech-05.png" alt="blog image" class="img-fluid modal-feat-img">
+                            <p>Combine and Swift async/await are often referred to as overlapping technologies from the perspective of asynchronous processing, but GCD is more commonly described as being replaced by async/await.</p>
                         </div>
                     </div>
                     <!-- End of .modal-body -->
